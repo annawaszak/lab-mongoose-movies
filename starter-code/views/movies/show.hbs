@@ -1,0 +1,17 @@
+<h2>Find out more about your chosen movie</h2><br>
+{{#with movie}}
+    <p><strong>Title:</strong> {{title}}</p>
+    <p><strong>Genre:</strong> {{genre}}</p>
+    <p><strong>Plot:</strong> {{plot}}</p>
+    <p><strong>Cast:</strong></p>
+    {{#each cast}}
+      <ul>
+        <li>{{ this.name }}</li>
+      </ul>
+    {{/each}}
+
+
+<a href="/movies/{{_id}}/edit">Edit the movie</a><br>
+{{!-- <a href="/movies//{{id}}/delete">Delete the movies</a><br> --}}
+<a href="/movies">Go back to the list of all Movies</a>
+{{/with}}
